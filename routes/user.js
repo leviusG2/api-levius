@@ -13,7 +13,7 @@ router.post('/create', (req, res) => {
     })
 })
 
-router.post('/login', (eq, res) => {
+router.post('/login', (req, res) => {
     const { username, password } = req.body;
     userModels.findOne({ username }, (err, result) => {
         if (err) throw err;
